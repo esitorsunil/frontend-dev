@@ -2,7 +2,7 @@
 function App() {
   return (
     <>
-      <h1>DevTinder- Web</h1>
+      <h1>DevTinder-Web</h1>
     </>
   )
 }
