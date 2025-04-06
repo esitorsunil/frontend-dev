@@ -8,7 +8,16 @@ const Requests = () => {
   const requests = useSelector((store) => store.requests);
   const dispatch = useDispatch();
 
-  
+  const reviewRequest = async (status, _id) => {
+    try {
+      const res = axios.post(
+        BASE_URL + "/request/review/" + status + "/" + _id,
+        {},
+        { withCredentials: true }
+      );
+      dispatch(removeRequest(_id));
+    } catch (err) {}
+  };
 
   const fetchRequests = async () => {
     try {
